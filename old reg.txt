@@ -1,0 +1,154 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="rgstr.aspx.cs" Inherits="Project.rgstr" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>register</title>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="description" content="This is a login page template based on Bootstrap 5" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+</head>
+<body>
+	   <form runat="server">
+        <div class="col-md-12 col-sm-12 col-xs-12" style="display: normal; text-align: center; padding: 0px; margin-bottom: 10px; margin-top:50px;">
+            <label style="text-align:center">Please Select Any One</label>
+            </div>
+	
+            <div class="col-md-12 col-sm-12 col-xs-12" id="registertype" style="display: normal; text-align: center; padding: 0px; margin-bottom: 10px;">
+				<asp:Button ID="Button1" runat="server" Text="I am Martial Arts Master"  class="btn btn-info btn-danger" OnClick="Button1_Click1"  />
+               <%-- <input type="button" id="martialexperts" style="margin-right:-10px" class="btn btn-info btn-danger" value="I am Martial Arts Master" onclick="form1()" />--%>
+				<asp:Button ID="Button2" runat="server" Text="I am Martial Arts Enthusiastic"  class="btn btn-info btn-danger" OnClick="Button1_Click"  />
+                <%--<input type="button" id="martialenthusiastic" style="margin-left:15px" class="btn btn-info btn-danger" value="I am Martial Arts Enthusiastic" onclick="form2();" />--%>
+            </div>
+		<div class="row justify-content-sm-center h-100">
+			<div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
+             <form  id="formdiv" style="display:none;text-align:center;overflow-x:hidden">
+								<div class="mb-3">
+									<label class="mb-2 text-muted" for="name">Name</label>
+									<input id="name" type="text" class="form-control" placeholder="Enter Name" name="name" value="" required autofocus>
+									<div class="invalid-feedback">
+										Name is required	
+									</div>
+								</div>
+
+								<div class="mb-3">
+									<label class="mb-2 text-muted" for="email">E-Mail</label>
+									<input id="email" type="email" class="form-control" placeholder="Enter Email" name="email" value="" required>
+									<div class="invalid-feedback">
+										Email is invalid
+									</div>
+								</div>
+
+								<div class="mb-3">
+									<label class="mb-2 text-muted" for="password">Password</label>
+									<input id="password" type="password" placeholder="Enter Password" class="form-control" name="password" required>
+								    <div class="invalid-feedback">
+								    	Password is required
+							    	</div>
+								</div>
+		<div class="mb-3" id="fed">
+				<label class="mb-2 text-muted" for="fedration name">Fedration Name</label>
+				<input id="fname" type="text" placeholder="Enter Dojo Name" class="form-control" name="name" value="" required autofocus>
+				<div class="invalid-feedback">
+								Name is required	
+				</div>
+</div>
+<div id="dd1">
+	<label class="mb-2 text-muted" for="number">Martial Arts</label>
+<asp:DropDownList class="mb-2 text-muted" ID="DropDownList1" runat="server" Height="30px" Width="415px">
+	<asp:ListItem>Select Martial Art</asp:ListItem>
+        <asp:ListItem>Karatte</asp:ListItem>
+        <asp:ListItem>kalripayattu</asp:ListItem>
+        <asp:ListItem>Kung fu</asp:ListItem>
+        <asp:ListItem>Judo</asp:ListItem>
+        <asp:ListItem>Wrestling</asp:ListItem>
+        <asp:ListItem>Jui juitsu</asp:ListItem>
+        <asp:ListItem>Kick Boxing</asp:ListItem>
+        <asp:ListItem Value="Boxing"></asp:ListItem>
+    </asp:DropDownList>
+    <br />
+</div>
+					<div class="mb-3">
+		<label class="mb-2 text-muted" for="number">Phone Number</label>
+		<input id="number" type="text" placeholder="Enter Phone Number" class="form-control" name="Mobail" value="" required autofocus>
+		<div class="invalid-feedback">
+						Name is required	
+		</div>
+	<label class="mb-2 text-muted" for="number">District</label><br />
+<asp:DropDownList class="mb-2 text-muted" ID="DropDownList2" runat="server" Height="30px" Width="415px">
+	<asp:ListItem>Select District</asp:ListItem>
+        <asp:ListItem>Thiruvananthapuram</asp:ListItem>
+        <asp:ListItem>Kollam</asp:ListItem>
+        <asp:ListItem>Pathanamthitta</asp:ListItem>
+        <asp:ListItem>Alappuzha</asp:ListItem>
+        <asp:ListItem>Kottayam</asp:ListItem>
+        <asp:ListItem>Idukki</asp:ListItem>
+        <asp:ListItem>Ernakulam</asp:ListItem>
+		<asp:ListItem Value="Thrissur"></asp:ListItem>
+        <asp:ListItem Value="Malappuram"></asp:ListItem>
+		<asp:ListItem Value="Palakkad"></asp:ListItem>
+	<asp:ListItem Value="Kozhikode"></asp:ListItem>
+	<asp:ListItem Value="Wayanad"></asp:ListItem>
+	<asp:ListItem Value="Kannur"></asp:ListItem>
+	<asp:ListItem Value="Kasaragod"></asp:ListItem>
+    </asp:DropDownList>
+    <br />
+</div>
+					<label class="mb-2 text-muted" for="number">Address</label>
+<div class="form-floating">
+      <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
+  </div><br />
+		<div class="align-items-center ">
+									<button type="submit" class="btn btn-danger  ms-auto">
+										Register</button>
+								</div><br />
+				</form>
+					</div>
+			</div>
+		   
+			
+	<div  style="height:100px;"></div>
+	<div class=" py-3 border-0 fixed-bottom bg-danger">
+				<div class="text-center ">
+					Already have an account? <a href="login.aspx" class="text-dark">Login</a>
+				</div>
+			</div>
+		   </form>
+	<script>
+
+    var Type1 = 'I am Martial Arts Master';
+
+    var Type2 = 'I am Martial Arts Enthusiastic';
+
+    var registertype = 0;
+
+    function form1()
+    {
+        registertype = 1;
+        document.getElementById("Button1").disabled = true;
+        document.getElementById("Button2").disabled = false;
+        document.getElementById("formdiv").style.display = "block";
+        document.getElementById("fed").style.display = "block";
+        document.getElementById("dd1").style.display = "block";
+    }
+    function form2() {
+        registertype = 2;
+        document.getElementById("Button1").disabled = false;
+        document.getElementById("Button2").disabled = true;
+
+        document.getElementById("formdiv").style.display = "block";
+        document.getElementById("fed").style.display = "none";
+        document.getElementById("dd1").style.display = "none";
+    }
+
+
+    $(function () {
+        $("#txtdob").datepicker();
+    });
+
+    </script>
+		   	
+</body>
+</html>
