@@ -182,6 +182,7 @@
     <Content Include="login.aspx" />
     <Content Include="mlpm.aspx" />
     <Content Include="more.aspx" />
+    <Content Include="msg.aspx" />
     <Content Include="nm\KARATE\12.jpg" />
     <Content Include="nm\about.jpg" />
     <Content Include="nm\b.jpg" />
@@ -701,6 +702,13 @@
     </Compile>
     <Compile Include="more.aspx.designer.cs">
       <DependentUpon>more.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="msg.aspx.cs">
+      <DependentUpon>msg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="msg.aspx.designer.cs">
+      <DependentUpon>msg.aspx</DependentUpon>
     </Compile>
     <Compile Include="plkd.aspx.cs">
       <DependentUpon>plkd.aspx</DependentUpon>

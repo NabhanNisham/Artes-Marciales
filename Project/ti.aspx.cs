@@ -13,7 +13,7 @@ namespace Project
     public partial class ti : System.Web.UI.Page
     {
 
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\nabha\Desktop\Project\Project\App_Data\Database1.mdf;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Projects\Completed\Project\Project\App_Data\Database1.mdf;Integrated Security=True");
         protected void Page_Load(object sender, EventArgs e)
         {
             con.Open();
@@ -43,7 +43,7 @@ namespace Project
             try
             {
                 int itemId = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Value);
-                using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\nabha\Desktop\Project\Project\App_Data\Database1.mdf;Integrated Security=True"))
+                using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Projects\Completed\Project\Project\App_Data\Database1.mdf;Integrated Security=True"))
                 {
                     connection.Open();
                     SqlCommand cmd = new SqlCommand("DELETE FROM tnt WHERE tid = @itemId", connection);
@@ -60,16 +60,12 @@ namespace Project
                     }
                 }
 
-                // After deletion, you may want to rebind the GridView to show updated data
                 BindGridView();
             }
             catch (Exception ex)
             {
-                // Handle any exceptions that may occur during the deletion process
-                // You can log the exception or display an error message to the user.
-            }
 
-            // Cancel the GridView's default delete operation
+            }
             e.Cancel = true;
         }
 

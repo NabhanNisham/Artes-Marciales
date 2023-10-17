@@ -107,34 +107,34 @@
                     tabindex="0"></iframe>
             </div>
             <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                <form>
+                <form runat="server">
                     <div class="row g-3">
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                <asp:TextBox ID="TextBox3" runat="server" class="form-control" placeholder="Name"></asp:TextBox>
                                 <label for="name">Your Name</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                <asp:TextBox ID="TextBox1" runat="server" class="form-control" placeholder="Email"></asp:TextBox>
                                 <label for="email">Your Email</label>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                <asp:TextBox ID="TextBox2" runat="server" class="form-control" placeholder="Subject"></asp:TextBox>
                                 <label for="subject">Subject</label>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-floating">
-                                <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
+                                <asp:TextBox ID="TextBox4" runat="server" TextMode="MultiLine"  style="height: 150px; width:500px;"></asp:TextBox>
                                 <label for="message">Message</label>
                             </div>
                         </div>
                         <div class="col-12">
-                            <button class="btn btn-danger w-100 py-3" type="submit">Send Message</button>
+                            <asp:Button ID="Button1" runat="server" Text="Button"  class="btn btn-danger w-100 py-3" OnClick="Button1_Click"/>
                         </div>
                     </div>
                 </form>

@@ -39,11 +39,12 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto p-4 p-lg-0">
             <a href="regi.aspx" class="nav-item nav-link text-warning">Register Data</a>
-            <a href="tnti.aspx" class="nav-item nav-link text-warning">Tournment Data</a>
+            <a href="ti.aspx" class="nav-item nav-link text-warning">Tournment Data</a>
+            <a href="msg.aspx" class="nav-item nav-link text-warning">Messages</a>
         </div>
         <div class="w-25 h-100 bg-white-50 d-flex" style="border-radius:10px;">
             <asp:TextBox ID="TextBox1" runat="server" class="bg-white" style="border-radius:10px; border:0%;"></asp:TextBox><br />
-            <asp:Button ID="Button1" runat="server" Text="Button" class="bg-warning" style="border-radius:10px; border:0%;" OnClick="Button1_Click"/>
+            <asp:Button ID="Button1" runat="server" Text="Seach" class="bg-warning" style="border-radius:10px; border:0%;" OnClick="Button1_Click"/>
         </div>
         <a href="Default.aspx" class="btn btn-warning red-700 py-4 px-lg-5 d-none d-lg-block">Log out<i class="fa fa-arrow-right ms-3"></i></a>
     </div>
